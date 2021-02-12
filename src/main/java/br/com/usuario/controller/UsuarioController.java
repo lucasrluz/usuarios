@@ -16,25 +16,25 @@ public class UsuarioController {
     @GetMapping("/usuario/view")
     public List<Usuario> viewUsuarios() {
 
-        return usuarioService.buscarUsuarios();
+        return usuarioService.viewUsuarios();
     }
 
     @PostMapping("/usuario/add")
     public Usuario addUsuario(@RequestBody Usuario usuario) {
 
-        return usuarioService.salvarUsuario(usuario);
+        return usuarioService.saveUsuario(usuario);
     }
 
     @PutMapping("/usuario/update")
     public Usuario updateUsuario(@RequestBody Usuario usuario) {
 
-        return usuarioService.alterarUsuario(usuario);
+        return usuarioService.updateUsuario(usuario);
     }
 
     @DeleteMapping("/usuario/delete/{id}")
     public void deleteUsuario(@PathVariable Long id) {
 
-        usuarioService.deletarUsuario(id);
+        usuarioService.deleteUsuario(id);
     }
 
 }
