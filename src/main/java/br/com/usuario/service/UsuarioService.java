@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface UsuarioService {
 
-    List<Usuario> buscarUsuarios();
+    List<Usuario> viewUsuarios();
 
-    Usuario salvarUsuario(Usuario usuario);
+    Usuario saveUsuario(Usuario usuario);
 
-    void deletarUsuario(Long id);
+    void deleteUsuario(Long id);
 
-    Usuario alterarUsuario(Usuario usuario);
+    Usuario updateUsuario(Usuario usuario);
 }

@@ -14,12 +14,12 @@ public class UsuarioServiceImpl implements UsuarioService{
     UsuarioRepository usuarioRepository;
 
     @Override
-    public List<Usuario> buscarUsuarios() {
+    public List<Usuario> viewUsuarios() {
         return usuarioRepository.findAll();
     }
 
     @Override
-    public Usuario salvarUsuario(Usuario usuario) {
+    public Usuario saveUsuario(Usuario usuario) {
 
         if (usuarioRepository.findByNome(usuario.getNome()) == null){
 
@@ -34,14 +34,14 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public void deletarUsuario(Long id) {
+    public void deleteUsuario(Long id) {
 
         usuarioRepository.deleteById(id);
 
     }
 
     @Override
-    public Usuario alterarUsuario(Usuario usuario) {
+    public Usuario updateUsuario(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
