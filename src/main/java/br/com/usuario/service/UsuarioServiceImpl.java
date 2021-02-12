@@ -18,4 +18,18 @@ public class UsuarioServiceImpl implements UsuarioService{
         return usuarioRepository.findAll();
     }
 
+    @Override
+    public Usuario salvarUsuario(Usuario usuario) {
+
+        if (usuarioRepository.findByNome(usuario.getNome()) == null){
+
+            return usuarioRepository.save(usuario);
+
+        } else {
+
+            System.out.println("Este usuário já existe!");
+
+            return null;
+        }
+    }
 }
