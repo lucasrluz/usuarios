@@ -32,4 +32,11 @@ public class UsuarioServiceImpl implements UsuarioService{
             return null;
         }
     }
+
+    @Override
+    public void deletarUsuario(Long id) {
+
+        usuarioRepository.deleteById(id);
+
+    }
 }
