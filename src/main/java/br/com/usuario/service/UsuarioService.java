@@ -9,4 +9,6 @@ public interface UsuarioService {
     List<Usuario> buscarUsuarios();
 
     Usuario salvarUsuario(Usuario usuario);
+
+    void deletarUsuario(Long id);
 }
