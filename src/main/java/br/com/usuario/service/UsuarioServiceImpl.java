@@ -39,4 +39,10 @@ public class UsuarioServiceImpl implements UsuarioService{
         usuarioRepository.deleteById(id);
 
     }
+
+    @Override
+    public Usuario alterarUsuario(Usuario usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
 }
