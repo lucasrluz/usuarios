@@ -21,9 +21,12 @@ public class Usuario {
     @NonNull
     private String nome;
 
-    @Size(max = 10)
+    @Size(max = 50)
     @NonNull
-    private String senha;
+    private String sobrenome;
+
+    @NonNull
+    private int idade;
 
     // Métodos Get e Set
 
@@ -45,11 +48,19 @@ public class Usuario {
     }
 
     @NonNull
-    public String getSenha() {
-        return senha;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setSenha(@NonNull String senha) {
-        this.senha = senha;
+    public void setSobrenome(@NonNull String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public double getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 }
